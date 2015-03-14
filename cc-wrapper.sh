@@ -17,7 +17,7 @@ optimizing=0
 
 for opt; do
   case "$opt" in
-    -fno-PIC|-fno-pic|-fno-PIE|-fno-pie|-nopie|-static|--static|-shared|--shared|-D__KERNEL__|-nostdlib|-nostartfiles)
+    -fno-PIC|-fno-pic|-fno-PIE|-fno-pie|-nopie|-static|--static|-shared|--shared|-D__KERNEL__|-nostdlib|-nostartfiles|-mcmodel=kernel)
       force_fPIE=0
       force_pie=0
       ;;
