@@ -27,10 +27,13 @@ for opt; do
     -c|-E|-S)
       force_pie=0
       ;;
-    -nostdlib|-ffreestanding)
+    -fno-stack-check|-fstack-check)
+      force_stack_check=0
+      ;;
+    -fno-stack-protector|-nostdlib|-ffreestanding)
       force_stack_protector=0
       ;;
-    -D_FORTIFY_SOURCE*)
+    -U_FORTIFY_SOURCE|-D_FORTIFY_SOURCE*)
       force_fortify=0
       ;;
     -O0)
